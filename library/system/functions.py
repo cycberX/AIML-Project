@@ -294,7 +294,7 @@ def take_screenshot() -> str:
         "$g.Dispose(); $bmp.Dispose(); 'OK'"
     )
     _powershell(script)
-    return f"Screenshot saved to {target}"
+    return f"{target}"
 
 
 def open_screen_recording() -> str:
