@@ -7,7 +7,6 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from core.ui.input_widget import FloatingInputWidget
-from core.ui.output_widget import FloatingOutputWidget
 from core.ui.confirm_dialog import ask_confirmation  # Import modal dialog
 from core.intent_predictor import predict_intent
 from core.executor import execute_all
@@ -20,8 +19,6 @@ def main():
     speak("Assistant is ready.")
 
     input_widget = FloatingInputWidget()
-    output_widget = FloatingOutputWidget(parent=input_widget.root)
-    output_widget.hide()
 
     def gui_confirm(prompt: str, expected_response: str) -> bool:
         """Runs the confirmation modal on the UI thread."""
